@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/">
+        <file>project_cn.qm</file>
+    </qresource>
+</RCC>

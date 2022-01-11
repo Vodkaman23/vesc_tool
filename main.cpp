@@ -25,6 +25,8 @@
 #include <QSettings>
 #include <QDesktopWidget>
 #include <QFontDatabase>
+#include <QTranslator>
+
 
 #ifdef Q_OS_LINUX
 #include <signal.h>
@@ -191,6 +193,10 @@ int main(int argc, char *argv[])
 
     qApp->setFont(QFont("Roboto", 12));
 
+    QTranslator translator;
+    translator.load(":/project_cn.qm");
+    a->installTranslator(&translator);
+
     QmlUi *qml = new QmlUi;
     qml->startQmlUi();
 
@@ -258,6 +264,21 @@ int main(int argc, char *argv[])
         QFontDatabase::addApplicationFont("://res/fonts/Roboto/Roboto-Bolf.ttf");
         QFontDatabase::addApplicationFont("://res/fonts/Roboto/Roboto-BoldItalic.ttf");
         QFontDatabase::addApplicationFont("://res/fonts/Roboto/Roboto-Italic.ttf");
+
+        QStringList languages;
+        languages <<"English" <<"Chinese";
+
+        QString lang = QInputDialog::getItem(NULL,"Select Language",
+                                             "Language",languages);
+
+        QTranslator translator;
+        if(lang=="Chinese"){
+            translator.load(":/project_cn.qm");
+        }
+
+        if (lang!="English"){
+            qApp->installTranslator(&translator);
+        }
 
         qApp->setFont(QFont("Roboto", 12));
 

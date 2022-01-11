@@ -31,7 +31,7 @@ CONFIG += c++11
 QMAKE_CXXFLAGS += -Wno-deprecated-copy
 
 # Build mobile GUI
-#CONFIG += build_mobile
+CONFIG += build_mobile
 
 # Debug build (e.g. F5 to reload QML files)
 #DEFINES += DEBUG_BUILD
@@ -65,7 +65,7 @@ win32: {
 # Options
 #CONFIG += build_original
 #CONFIG += build_platinum
-#CONFIG += build_gold
+CONFIG += build_gold
 #CONFIG += build_silver
 #CONFIG += build_bronze
 #CONFIG += build_free
@@ -213,6 +213,7 @@ include(map/map.pri)
 include(lzokay/lzokay.pri)
 
 RESOURCES += res.qrc \
+    Language.qrc \
     res_fw_bms.qrc \
     res_qml.qrc
 RESOURCES += res_config.qrc
