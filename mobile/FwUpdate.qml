@@ -101,7 +101,7 @@ Item {
                             Text {
                                 anchors.centerIn: parent
                                 color: "white"
-                                text: "Included Files"
+                                text: "内置文件"
                                 font.bold: true
                                 verticalAlignment: Text.AlignVCenter
                                 horizontalAlignment: Text.AlignHCenter
@@ -118,7 +118,7 @@ Item {
                             color: "white"
                             Layout.fillWidth: true
                             height: 30;
-                            text: "Hardware"
+                            text: "硬件"
                             horizontalAlignment: Text.AlignHCenter
                         }
 
@@ -162,7 +162,7 @@ Item {
                             color: "white"
                             Layout.fillWidth: true
                             height: 30;
-                            text: "Firmware"
+                            text: "固件"
                             horizontalAlignment: Text.AlignHCenter
                         }
 
@@ -179,12 +179,12 @@ Item {
                         }
 
                         Button {
-                            text: "Show Changelog"
+                            text: "显示更新日志"
                             Layout.fillWidth: true
 
                             onClicked: {
                                 VescIf.emitMessageDialog(
-                                            "Firmware Changelog",
+                                            "更新日志",
                                             Utility.fwChangeLog(),
                                             true)
                             }
@@ -231,7 +231,7 @@ Item {
                             Text {
                                 anchors.centerIn: parent
                                 color: "white"
-                                text: "Custom File"
+                                text: "自定义文件"
                                 font.bold: true
                                 verticalAlignment: Text.AlignVCenter
                                 horizontalAlignment: Text.AlignHCenter
@@ -251,7 +251,7 @@ Item {
                         }
 
                         Button {
-                            text: "Choose File..."
+                            text: "选择文件..."
                             Layout.fillWidth: true
 
                             onClicked: {
@@ -260,8 +260,8 @@ Item {
                                     filePicker.visible = true
                                 } else {
                                     VescIf.emitMessageDialog(
-                                                "File Permissions",
-                                                "Unable to request file system permission.",
+                                                "文件权限",
+                                                "无法取得系统权限",
                                                 false, false)
                                 }
                             }
@@ -323,7 +323,7 @@ Item {
                             Text {
                                 anchors.centerIn: parent
                                 color: "white"
-                                text: "Bootloader"
+                                text: "引导加载程序"
                                 font.bold: true
                                 verticalAlignment: Text.AlignVCenter
                                 horizontalAlignment: Text.AlignHCenter
@@ -340,7 +340,7 @@ Item {
                             color: "white"
                             Layout.fillWidth: true
                             height: 30;
-                            text: "Hardware"
+                            text: "硬件"
                             horizontalAlignment: Text.AlignHCenter
                         }
 
@@ -433,8 +433,8 @@ Item {
                     id: versionText
                     color: "#e0e0e0"
                     text:
-                        "FW   : \n" +
-                        "HW   : \n" +
+                        "固件   : \n" +
+                        "硬件   : \n" +
                         "UUID : "
                     font.family: "DejaVu Sans Mono"
                     verticalAlignment: Text.AlignVCenter
@@ -509,21 +509,20 @@ Item {
     function uploadFw(fwdCan) {
         if (!VescIf.isPortConnected()) {
             VescIf.emitMessageDialog(
-                        "Connection Error",
-                        "The VESC is not connected. Please open a connection.",
+                        "连接错误",
+                        "VESC未连接，请连接",
                         false)
             return
         }
 
-        var msg = "You are about to upload new firmware to the connected VESC"
-        var msgBl = "You are about to upload a bootloader to the connected VESC"
+        var msg = "您即将上传新固件到已连接的VESC"
+        var msgBl = "您即将上传一个引导加载程序到连接的VESC"
 
         var msgEnd = "."
         if (fwdCan) {
-            msgEnd = ", as well as all VESCs found on the CAN-bus. \n\n" +
-                    "WARNING: The upload all function should ONLY be used if all " +
-                    "VESCs on the CAN-bus have the same hardware version. If that " +
-                    "is not the case, you must upload firmware to the VESCs individually."
+            msgEnd = "，以及can总线上发现的所有vesc。 \n\n" +
+                    "警告:只有在can总线上所有vesc硬件版本相同的情况下，才能使用上传全部功能。" +
+                    "如果不是这样，则必须分别向vesc上传固件。"
         }
 
         msg += msgEnd
@@ -534,78 +533,74 @@ Item {
         if (swipeView.currentIndex == 0) {
             if (fwItems.rowCount() === 0) {
                 VescIf.emitMessageDialog(
-                            "Upload Error",
-                            "This version of VESC Tool does not include any firmware " +
-                            "for your hardware version. You can either " +
-                            "upload a custom file or look for a later version of VESC " +
-                            "Tool that might support your hardware.",
+                            "上传错误",
+                            "此版本的VESC工具不包含任何硬件版本的固件。 " +
+                            "您可以上传自定义文件， " +
+                            "或者寻找可能支持您的硬件的VESC Tool的新版本。",
                             false)
                 return;
             }
 
             if (hwItems.rowCount() === 1) {
-                uploadDialog.title = "Warning"
+                uploadDialog.title = "警告"
 
                 if (VescIf.getFwSupportsConfiguration()) {
                     msg += "\n\n" +
-                            "Uploading new firmware will clear all settings on your VESC. You can make " +
-                            "a backup of the settings from the connection page and restore them after the " +
-                            "update if you'd like (if you haven't done the backup already). " +
-                            "Do you want to continue with the update, or cancel and do the backup first?"
+                            "上传新固件将清除VESC上的所有设置。 " +
+                            "您可以从连接页面备份设置， " +
+                            "并在更新之后恢复它们(如果您还没有备份的话)。 " +
+                            "您想要继续更新，还是先取消并执行备份?"
                 } else {
                     msg += "\n\n" +
-                            "Uploading new firmware will clear all settings on your VESC " +
-                            "and you have to do the configuration again. Do you want to " +
-                            "continue?"
+                            "上传新固件将清除VESC上的所有设置， " +
+                            "您必须重新进行配置。要继续吗?
+
+"
                 }
 
                 uploadDialogLabel.text = msg
                 uploadDialog.open()
             } else {
-                uploadDialog.title = "Warning"
+                uploadDialog.title = "警告"
                 uploadDialogLabel.text =
                         msg + "\n\n" +
-                        "Uploading firmware for the wrong hardware version " +
-                        "WILL damage the VESC for sure. Are you sure that you have " +
-                        "chosen the correct hardware version?"
+                        "上传不同硬件版本的固件肯定会损坏VESC。" +
+                        "您确定选择了正确的硬件版本吗?"
                 uploadDialog.open()
             }
         } else if (swipeView.currentIndex == 1) {
             if (customFwText.text.length > 0) {
-                uploadDialog.title = "Warning"
+                uploadDialog.title = "警告"
                 uploadDialogLabel.text =
                         msg + "\n\n" +
-                        "Uploading firmware for the wrong hardware version " +
-                        "WILL damage the VESC for sure. Are you sure that you have " +
-                        "chosen the correct hardware version?"
+                        "上传不同硬件版本的固件肯定会损坏VESC。" +
+                        "您确定选择了正确的硬件版本吗?"
                 uploadDialog.open()
             } else {
                 VescIf.emitMessageDialog(
-                            "Error",
-                            "Please select a file",
+                            "错误",
+                            "请选择文件",
                             false, false)
             }
         } else if (swipeView.currentIndex == 2) {
             if (blItems.rowCount() === 0) {
                 VescIf.emitMessageDialog(
-                            "Upload Error",
-                            "This version of VESC Tool does not include any bootloader " +
-                            "for your hardware version.",
+                            "上传错误",
+                            "VESC工具的这个版本不包含您硬件版本的引导加载程序。",
                             false)
                 return;
             }
 
-            uploadDialog.title = "Warning"
+            uploadDialog.title = "警告"
 
             var msgBl2 = ""
             if (!mCommands.getLimitedSupportsEraseBootloader()) {
-                msgBl2 = "If the VESC already has a bootloader this will destroy " +
-                        "the bootloader and firmware updates cannot be done anymore. "
+                msgBl2 = "如果VESC已经有一个引导加载程序，这将破坏引导加载程序和固件更新不能再继续了 "
             }
 
             uploadDialogLabel.text =
                     msgBl + "\n\n" + msgBl2 +
-                    "Do you want to continue?"
+                    "你想继续吗?"
             uploadDialog.open()
         }
     }
@@ -621,8 +616,8 @@ Item {
 
             if (!VescIf.isPortConnected()) {
                 versionText.text =
-                        "FW   : \n" +
-                        "HW   : \n" +
+                        "固件   : \n" +
+                        "硬件   : \n" +
                         "UUID : "
             }
         }
@@ -658,8 +653,8 @@ Item {
             }
 
             versionText.text =
-                    "FW   : " + params.major + "." + params.minor + testFwStr + "\n" +
-                    "HW   : " + params.hw + "\n" +
+                    "固件   : " + params.major + "." + params.minor + testFwStr + "\n" +
+                    "硬件   : " + params.hw + "\n" +
                     "UUID : " + Utility.uuid2Str(params.uuid, false)
         }
     }

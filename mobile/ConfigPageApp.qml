@@ -35,7 +35,7 @@ Item {
 
     Dialog {
         id: ppmMap
-        title: "PPM Mapping"
+        title: "PPM 区间"
         standardButtons: Dialog.Close
         modal: true
         focus: true
@@ -53,7 +53,7 @@ Item {
 
     Dialog {
         id: adcMap
-        title: "ADC Mapping"
+        title: "ADC 区间"
         standardButtons: Dialog.Close
         modal: true
         focus: true
@@ -71,7 +71,7 @@ Item {
 
     Dialog {
         id: nrfPair
-        title: "NRF Pairing"
+        title: "NRF 配对"
         standardButtons: Dialog.Close
         modal: true
         focus: true
@@ -89,7 +89,7 @@ Item {
 
     Dialog {
         id: detectImu
-        title: "IMU Calibration"
+        title: "IMU 校准"
         standardButtons: Dialog.Close
         modal: true
         focus: true
@@ -207,7 +207,7 @@ Item {
             Button {
                 Layout.preferredWidth: 100
                 Layout.fillWidth: true
-                text: "Read"
+                text: "读取"
 
                 onClicked: {
                     mCommands.getAppConf()
@@ -225,31 +225,31 @@ Item {
                     width: 500
 
                     MenuItem {
-                        text: "Read Default Settings"
+                        text: "读取默认设置"
                         onTriggered: {
                             mCommands.getAppConfDefault()
                         }
                     }
                     MenuItem {
-                        text: "PPM Mapping..."
+                        text: "PPM 区间..."
                         onTriggered: {
                             ppmMap.open()
                         }
                     }
                     MenuItem {
-                        text: "ADC Mapping..."
+                        text: "ADC 区间..."
                         onTriggered: {
                             adcMap.open()
                         }
                     }
                     MenuItem {
-                        text: "Pair NRF..."
+                        text: "NRF配对..."
                         onTriggered: {
                             nrfPair.open()
                         }
                     }
                     MenuItem {
-                        text: "Calibrate IMU..."
+                        text: "IMU校准..."
                         onTriggered: {
                             detectImu.open()
                         }

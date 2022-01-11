@@ -173,15 +173,14 @@ Item {
                     spacing: isHorizontal ? -5 : -10
 
                     Button {
-                        text: "Motors (FOC)"
+                        text: "电机检测(FOC)"
                         Layout.fillWidth: true
                         Layout.preferredWidth: 500
 
                         onClicked: {
                             if (!VescIf.isPortConnected()) {
-                                VescIf.emitMessageDialog("FOC Setup Wizard",
-                                                         "You are not connected to the VESC. Please connect in order " +
-                                                         "to run this wizard.", false, false)
+                                VescIf.emitMessageDialog("FOC设置向导",
+                                                         "VESC未连接，请连接再试", false, false)
                             } else {
                                 wizardFoc.openDialog()
                             }
@@ -189,14 +188,13 @@ Item {
                     }
 
                     Button {
-                        text: "Input"
+                        text: "遥控设置"
                         Layout.fillWidth: true
 
                         onClicked: {
                             if (!VescIf.isPortConnected()) {
-                                VescIf.emitMessageDialog("Input Setup Wizard",
-                                                         "You are not connected to the VESC. Please connect in order " +
-                                                         "to run this wizard.", false, false)
+                                VescIf.emitMessageDialog("遥控设置",
+                                                         "VESC未连接，请连接再试", false, false)
                             } else {
                                 // Something in the opendialog function causes a weird glitch, probably
                                 // caused by the eventloop in the can scan function. Disabling the button
@@ -210,15 +208,14 @@ Item {
 
                     Button {
                         id: nrfPairButton
-                        text: "NRF Quick Pair"
+                        text: "NRF快速配对"
                         Layout.fillWidth: true
                         Layout.preferredWidth: 500
 
                         onClicked: {
                             if (!VescIf.isPortConnected()) {
-                                VescIf.emitMessageDialog("NRF Quick Pair",
-                                                         "You are not connected to the VESC. Please connect in order " +
-                                                         "to quick pair an NRF-based remote.", false, false)
+                                VescIf.emitMessageDialog("NRF快速配对",
+                                                         "VESC未连接，请连接再试", false, false)
                             } else {
                                 nrfPairStartDialog.open()
                             }
@@ -299,7 +296,7 @@ Item {
 
                         Button {
                             id: canAllButton
-                            text: "List All (no Scan)"
+                            text: "显示所有（不检测）"
                             Layout.fillWidth: true
                             Layout.preferredWidth: 500
 
@@ -315,7 +312,7 @@ Item {
 
                         Button {
                             id: canScanButton
-                            text: "Scan CAN Bus"
+                            text: "检测CAN总线"
                             Layout.fillWidth: true
                             Layout.preferredWidth: 500
 
@@ -350,7 +347,7 @@ Item {
                     spacing: isHorizontal ? -5 : -10
 
                     Button {
-                        text: "Controls"
+                        text: "控制"
                         Layout.fillWidth: true
                         Layout.preferredWidth: 500
 
@@ -360,15 +357,14 @@ Item {
                     }
 
                     Button {
-                        text: "Directions"
+                        text: "方向"
                         Layout.fillWidth: true
                         Layout.preferredWidth: 500
 
                         onClicked: {
                             if (!VescIf.isPortConnected()) {
-                                VescIf.emitMessageDialog("Directions",
-                                                         "You are not connected to the VESC. Please connect in order " +
-                                                         "to map directions.", false, false)
+                                VescIf.emitMessageDialog("方向",
+                                                         "VESC未连接，请连接再试", false, false)
                             } else {
                                 enabled = false
                                 directionSetupDialog.open()
@@ -379,7 +375,7 @@ Item {
                     }
 
                     Button {
-                        text: "Backup Configuration(s)"
+                        text: "备份设置"
                         Layout.fillWidth: true
                         Layout.preferredWidth: 500
 
@@ -389,7 +385,7 @@ Item {
                     }
 
                     Button {
-                        text: "Restore Configuration(s)"
+                        text: "载入设置"
                         Layout.fillWidth: true
                         Layout.preferredWidth: 500
 
@@ -476,7 +472,7 @@ Item {
         }
 
         onBleError: {
-            VescIf.emitMessageDialog("BLE Error", info, false, false)
+            VescIf.emitMessageDialog("BLE错误", info, false, false)
         }
     }
 
@@ -527,7 +523,7 @@ Item {
         standardButtons: Dialog.Ok | Dialog.Cancel
         modal: true
         focus: true
-        title: "Set BLE Device Name"
+        title: "设置BLE设备名称"
 
         width: parent.width - 20
         height: 200
@@ -569,7 +565,7 @@ Item {
 
     Dialog {
         id: directionSetupDialog
-        title: "Direction Setup"
+        title: "方向设置"
         standardButtons: Dialog.Close
         modal: true
         focus: true
@@ -594,7 +590,7 @@ Item {
         focus: true
         width: parent.width - 20
         closePolicy: Popup.CloseOnEscape
-        title: "NRF Pairing"
+        title: "NRF配对"
 
         parent: ApplicationWindow.overlay
         x: 10
@@ -607,8 +603,7 @@ Item {
             anchors.fill: parent
             wrapMode: Text.WordWrap
             text:
-                "After clicking OK the VESC will be put in pairing mode for 10 seconds. Switch" +
-                "on your remote during this time to complete the pairing process."
+                "单击“确定”后，VESC将进入配对模式10秒。在此期间打开遥控器，完成配对过程。"
         }
 
         onAccepted: {
@@ -625,7 +620,7 @@ Item {
         focus: true
         width: parent.width - 20
         closePolicy: Popup.CloseOnEscape
-        title: "Backup configuration(s)"
+        title: "备份设置"
 
         parent: ApplicationWindow.overlay
         x: 10
@@ -637,9 +632,8 @@ Item {
             anchors.fill: parent
             wrapMode: Text.WordWrap
             text:
-                "This will backup the configuration of the connected VESC, as well as for the VESCs " +
-                "connected over CAN-bus. The configurations are stored by VESC UUID. If a backup for a " +
-                "VESC UUID already exists it will be overwritten. Continue?"
+                "这将备份已连接VESC的配置，以及通过can总线备份VESC的配置。 " +
+                "配置信息存储在VESC UUID中。如果VESC UUID的备份已经存在，则会被覆盖。继续吗?"
         }
 
         onAccepted: {
@@ -656,7 +650,7 @@ Item {
         focus: true
         width: parent.width - 20
         closePolicy: Popup.CloseOnEscape
-        title: "Restore configuration backup(s)"
+        title: "读取设置"
 
         parent: ApplicationWindow.overlay
         x: 10
@@ -668,9 +662,8 @@ Item {
             anchors.fill: parent
             wrapMode: Text.WordWrap
             text:
-                "This will restore the configuration of the connected VESC, as well as the VESCs connected over CAN bus " +
-                "if a backup exists for their UUID in this instance of VESC Tool. If no backup is found for the UUID of " +
-                "the VESCs nothing will be changed. Continue?"
+                "这将恢复连接的VESC的配置，以及通过CAN总线连接的VESC， " +
+                "如果在VESC工具的实例中存在UUID的备份。如果vesc的UUID没有备份，则不做任何修改。继续吗?"
         }
 
         onAccepted: {
@@ -682,7 +675,7 @@ Item {
 
     Dialog {
         id: progDialog
-        title: "Processing..."
+        title: "处理中..."
         closePolicy: Popup.NoAutoClose
         modal: true
         focus: true

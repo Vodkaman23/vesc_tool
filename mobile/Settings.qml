@@ -49,21 +49,21 @@ Item {
             CheckBox {
                 id: imperialBox
                 Layout.fillWidth: true
-                text: "Use Imperial Units"
+                text: "使用英式单位"
                 checked: VescIf.useImperialUnits()
             }
 
             CheckBox {
                 id: screenOnBox
                 Layout.fillWidth: true
-                text: "Keep Screen On"
+                text: "屏幕常亮（没用）"
                 checked: VescIf.keepScreenOn()
             }
 
             CheckBox {
                 id: wakeLockBox
                 Layout.fillWidth: true
-                text: "Use Wake Lock (experimental)"
+                text: "使用开启密码 (没用)"
                 checked: VescIf.useWakeLock()
             }
 

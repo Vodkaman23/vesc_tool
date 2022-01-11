@@ -53,7 +53,7 @@ Item {
             Button {
                 Layout.preferredWidth: 100
                 Layout.fillWidth: true
-                text: "Clear"
+                text: "清空"
 
                 onClicked: {
                     terminalText.clear()
@@ -63,7 +63,7 @@ Item {
             Button {
                 Layout.preferredWidth: 100
                 Layout.fillWidth: true
-                text: "Send"
+                text: "发出"
 
                 onClicked: {
                     mCommands.sendTerminalCmd(stringInput.text)
@@ -82,19 +82,19 @@ Item {
                     width: 500
 
                     MenuItem {
-                        text: "Print Faults"
+                        text: "显示错误码"
                         onTriggered: {
                             mCommands.sendTerminalCmd("faults")
                         }
                     }
                     MenuItem {
-                        text: "Print Threads"
+                        text: "显示线程"
                         onTriggered: {
                             mCommands.sendTerminalCmd("threads")
                         }
                     }
                     MenuItem {
-                        text: "Show Help"
+                        text: "显示帮助"
                         onTriggered: {
                             mCommands.sendTerminalCmd("help")
                         }

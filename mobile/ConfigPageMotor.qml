@@ -51,7 +51,7 @@ Item {
 
     Dialog {
         id: directionSetupDialog
-        title: "Direction Setup"
+        title: "方向设置"
         standardButtons: Dialog.Close
         modal: true
         focus: true
@@ -161,7 +161,7 @@ Item {
             Button {
                 Layout.preferredWidth: 100
                 Layout.fillWidth: true
-                text: "Write"
+                text: "写入"
 
                 onClicked: {
                     mCommands.setMcconf(true)
@@ -171,7 +171,7 @@ Item {
             Button {
                 Layout.preferredWidth: 100
                 Layout.fillWidth: true
-                text: "Read"
+                text: "读取"
 
                 onClicked: {
                     mCommands.getMcconf()
@@ -189,7 +189,7 @@ Item {
                     width: 500
 
                     MenuItem {
-                        text: "Read Default Settings"
+                        text: "读取默认设置"
                         onTriggered: {
                             mCommands.getMcconfDefault()
                         }

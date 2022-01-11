@@ -209,7 +209,7 @@ Item {
 
             Button {
                 Layout.fillWidth: true
-                text: "Cancel"
+                text: "取消"
 
                 onClicked: {
                     picker.enabled = false

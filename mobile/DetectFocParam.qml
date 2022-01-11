@@ -48,20 +48,20 @@ Item {
                 "\u03BB      : " + parseFloat(lambda * 1e3).toFixed(3) + " mWb\n" +
                 "KP     : " + parseFloat(kp).toFixed(4) + "\n" +
                 "KI     : " + parseFloat(ki).toFixed(2) + "\n" +
-                "Gain   : " + parseFloat(gain).toFixed(2)
+                "增益   : " + parseFloat(gain).toFixed(2)
     }
 
     function calcKpKi() {
         if (res < 1e-10) {
-            VescIf.emitMessageDialog("Calculate Error",
-                                     "R is 0. Please measure it first.",
+            VescIf.emitMessageDialog("计算错误",
+                                     "R等于0。请先量一下。",
                                      false, false)
             return;
         }
 
         if (ind < 1e-10) {
-            VescIf.emitMessageDialog("Calculate Error",
-                                     "L is 0. Please measure it first.",
+            VescIf.emitMessageDialog("计算错误",
+                                     "L等于0。请先量一下。",
                                      false, false)
             return;
         }
@@ -77,15 +77,15 @@ Item {
 
     function calcGain() {
         if (lambda < 1e-10) {
-            VescIf.emitMessageDialog("Calculate Error",
-                                     "\u03BB is 0. Please measure it first.",
+            VescIf.emitMessageDialog("计算错误",
+                                     "\u03BB等于0。请先量一下。",
                                      false, false)
             return;
         }
 
         if (res < 1e-10) {
-            VescIf.emitMessageDialog("Calculate Error",
-                                     "R is 0. Please measure it first.",
+            VescIf.emitMessageDialog("计算错误",
+                                     "R等于0。请先量一下。",
                                      false, false)
             return;
         }
@@ -100,8 +100,8 @@ Item {
             return true
         } else {
             VescIf.emitMessageDialog(
-                        "Connection Error",
-                        "The VESC is not connected. Please connect it to run detection.",
+                        "连接错误",
+                        "VESC未连接，请先连接再进行检测",
                         false, false)
             return false
         }
@@ -179,7 +179,7 @@ Item {
                 }
 
                 Button {
-                    text: "Help"
+                    text: "帮助"
                     Layout.fillWidth: true
                     onClicked: {
                         VescIf.emitMessageDialog(
@@ -192,7 +192,7 @@ Item {
                 RowLayout {
                     Layout.fillWidth: true
                     Button {
-                        text: "Detect R&L"
+                        text: "检测R&L"
                         Layout.preferredWidth: 50
                         Layout.fillWidth: true
                         onClicked: {
@@ -205,7 +205,7 @@ Item {
                     }
 
                     Button {
-                        text: "DETECT \u03BB"
+                        text: "检测 \u03BB"
                         font.capitalization: Font.MixedCase
                         Layout.preferredWidth: 50
                         Layout.fillWidth: true
@@ -215,8 +215,8 @@ Item {
                             }
 
                             if (res < 1e-9) {
-                                VescIf.emitMessageDialog("Detect",
-                                                         "R is 0. Please measure it first.",
+                                VescIf.emitMessageDialog("检测",
+                                                         "R等于0。请先量一下。",
                                                          false, false)
                             } else {
                                 detectLambdaDialog.open()

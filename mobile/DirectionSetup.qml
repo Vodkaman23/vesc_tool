@@ -128,7 +128,7 @@ Item {
                                 Layout.alignment: Qt.AlignHCenter | Qt.AlignBottom
                                 Layout.rightMargin: 5
                                 color: "white"
-                                text: "Inverted"
+                                text: "反向"
                                 horizontalAlignment: Text.AlignHCenter
                             }
 
@@ -195,7 +195,7 @@ Item {
 
     Dialog {
         id: commDialog
-        title: "Communicating..."
+        title: "通讯中..."
         closePolicy: Popup.NoAutoClose
         modal: true
         focus: true

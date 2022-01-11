@@ -89,8 +89,8 @@ Item {
             return true
         } else {
             VescIf.emitMessageDialog(
-                        "Connection Error",
-                        "The VESC is not connected. Please connect it to run detection.",
+                        "连接错误",
+                        "VESC未连接，请连接再尝试检测",
                         false, false)
             return false
         }
@@ -159,7 +159,7 @@ Item {
 
                     Text {
                         color: "white"
-                        text: "Profile Name"
+                        text: "档位名称"
                         font.bold: true
                         horizontalAlignment: Text.AlignHCenter
                         Layout.fillWidth: true
@@ -188,7 +188,7 @@ Item {
 
                     Text {
                         color: "white"
-                        text: "Speed Limit"
+                        text: "限速"
                         font.bold: true
                         horizontalAlignment: Text.AlignHCenter
                         Layout.fillWidth: true
@@ -197,7 +197,7 @@ Item {
 
                     DoubleSpinBox {
                         id: speedKmhBox
-                        prefix: "Forward: "
+                        prefix: "前进: "
                         realFrom: 0.0
                         realTo: 400.0
                         Layout.fillWidth: true
@@ -209,7 +209,7 @@ Item {
 
                     DoubleSpinBox {
                         id: speedKmhRevBox
-                        prefix: "Reverse: "
+                        prefix: "后退: "
                         realFrom: 0.0
                         realTo: 400.0
                         Layout.fillWidth: true
@@ -222,7 +222,7 @@ Item {
 
                     Text {
                         color: "white"
-                        text: "Motor Current Scale"
+                        text: "电机电流范围"
                         font.bold: true
                         horizontalAlignment: Text.AlignHCenter
                         Layout.fillWidth: true
@@ -232,7 +232,7 @@ Item {
                     DoubleSpinBox {
                         id: currentBox
                         Layout.fillWidth: true
-                        prefix: "Accel: "
+                        prefix: "加速: "
                         suffix: " %"
                         realFrom: 0
                         realTo: 100
@@ -243,7 +243,7 @@ Item {
                         id: currentBrakeBox
                         Layout.fillWidth: true
                         Layout.bottomMargin: 20
-                        prefix: "Brake: "
+                        prefix: "刹车: "
                         suffix: " %"
                         realFrom: 0
                         realTo: 100
@@ -252,7 +252,7 @@ Item {
 
                     CheckBox {
                         id: powerBox
-                        text: "Enable Power Limit"
+                        text: "启用功率限制"
                         checked: false
                         Layout.fillWidth: true
 
@@ -269,14 +269,14 @@ Item {
 
                     DoubleSpinBox {
                         id: powerMaxBox
-                        prefix: "Output: "
+                        prefix: "输出: "
                         Layout.fillWidth: true
                         visible: powerBox.checked
                     }
 
                     DoubleSpinBox {
                         id: powerMinBox
-                        prefix: "Regen: "
+                        prefix: "回充: "
                         Layout.fillWidth: true
                         visible: powerBox.checked
                     }
@@ -296,7 +296,7 @@ Item {
                         width: 500
 
                         MenuItem {
-                            text: "Read current configuration"
+                            text: "读取当前设置"
                             onTriggered: {
                                 readCurrentConfig()
                             }
@@ -305,7 +305,7 @@ Item {
                 }
 
                 Button {
-                    text: "Cancel"
+                    text: "取消"
                     Layout.fillWidth: true
                     onClicked: {
                         dialog.close()
@@ -315,7 +315,7 @@ Item {
 
                 Button {
                     id: okButton
-                    text: "Ok"
+                    text: "确定"
                     Layout.fillWidth: true
                     onClicked: {
                         dialog.close()

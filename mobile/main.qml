@@ -90,7 +90,7 @@ ApplicationWindow {
                 id: reconnectButton
 
                 Layout.fillWidth: true
-                text: "Reconnect"
+                text: "连接"
                 enabled: false
                 flat: true
 
@@ -101,7 +101,7 @@ ApplicationWindow {
 
             Button {
                 Layout.fillWidth: true
-                text: "Disconnect"
+                text: "断开"
                 enabled: connBle.disconnectButton.enabled
                 flat: true
 
@@ -112,7 +112,7 @@ ApplicationWindow {
 
             Button {
                 Layout.fillWidth: true
-                text: "Controls"
+                text: "控制"
                 flat: true
 
                 onClicked: {
@@ -129,7 +129,7 @@ ApplicationWindow {
 
             Button {
                 Layout.fillWidth: true
-                text: "Settings"
+                text: "设置"
                 flat: true
 
                 onClicked: {
@@ -140,12 +140,12 @@ ApplicationWindow {
 
             Button {
                 Layout.fillWidth: true
-                text: "About"
+                text: "关于"
                 flat: true
 
                 onClicked: {
                     VescIf.emitMessageDialog(
-                                "About",
+                                "关于",
                                 Utility.aboutText(),
                                 true, true)
                 }
@@ -153,12 +153,12 @@ ApplicationWindow {
 
             Button {
                 Layout.fillWidth: true
-                text: "Changelog"
+                text: "更新日志"
                 flat: true
 
                 onClicked: {
                     VescIf.emitMessageDialog(
-                                "VESC Tool Changelog",
+                                "VESC 工具 更新日志",
                                 Utility.vescToolChangeLog(),
                                 true, false)
                 }
@@ -166,7 +166,7 @@ ApplicationWindow {
 
             Button {
                 Layout.fillWidth: true
-                text: "License"
+                text: "许可"
                 flat: true
 
                 onClicked: {
@@ -351,7 +351,7 @@ ApplicationWindow {
                         columns: 2
 
                         Button {
-                            text: "Help"
+                            text: "帮助"
                             Layout.fillWidth: true
 
                             onClicked: {
@@ -363,7 +363,7 @@ ApplicationWindow {
                         }
 
                         Button {
-                            text: "Choose Log Directory..."
+                            text: "选择日志地址..."
                             Layout.fillWidth: true
 
                             onClicked: {
@@ -406,7 +406,7 @@ ApplicationWindow {
 
                         CheckBox {
                             id: rtLogEnBox
-                            text: "Enable RT Data Logging"
+                            text: "启用实时日志记录"
                             Layout.fillWidth: true
                             Layout.columnSpan: 2
 
@@ -467,7 +467,7 @@ ApplicationWindow {
 
                         CheckBox {
                             id: tcpServerEnBox
-                            text: "Run TCP Server"
+                            text: "启用TCP服务器"
                             Layout.fillWidth: true
                             Layout.columnSpan: 2
 
@@ -481,7 +481,7 @@ ApplicationWindow {
                         }
 
                         Text {
-                            text: "TCP Port"
+                            text: "TCP端口"
                             color: "white"
                             Layout.fillWidth: true
                             Layout.preferredWidth: 5000

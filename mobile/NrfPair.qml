@@ -65,7 +65,7 @@ Item {
         RowLayout {
             Layout.fillWidth: true
             Button {
-                text: "Help"
+                text: "帮助"
                 Layout.preferredWidth: 50
                 Layout.fillWidth: true
                 flat: true
@@ -80,7 +80,7 @@ Item {
 
             Button {
                 id: startButton
-                text: "Start"
+                text: "开始"
                 Layout.preferredWidth: 50
                 Layout.fillWidth: true
                 flat: true
@@ -131,10 +131,10 @@ Item {
                 startButton.enabled = true
                 pairCnt = 0.0
                 cntBar.value = 0
-                VescIf.emitStatusMessage("Pairing NRF Sucessful", true)
+                VescIf.emitStatusMessage("NRF配对成功！", true)
                 VescIf.emitMessageDialog(
-                            "NRF Pairing",
-                            "Pairing was successful.",
+                            "NRF 配对中",
+                            "配对成功。",
                             true, false)
                 break;
 
@@ -142,15 +142,15 @@ Item {
                 startButton.enabled = true
                 pairCnt = 0.0
                 cntBar.value = 0
-                VescIf.emitStatusMessage("Pairing NRF Timed Out", false)
+                VescIf.emitStatusMessage("NRF配对超时", false)
                 VescIf.emitMessageDialog(
-                            "NRF Pairing",
-                            "Pairing timed out. Make sure to put your device (e.g. NRF nunchuk) " +
-                            "in pairing mode before the time runs out." +
+                            "NRF配对中",
+                            "配对超时。请确保在时间结束前将您的设备(e.g. NRF nunchuk) " +
+                            "置于配对模式。" +
                             "<br><br>" +
-                            "To put the NRF nunchuk in " +
-                            "pairing mode, just switch it on using any of the buttons. Then it " +
-                            "will enter pairing mode if it was switched off previously.",
+                            "要把NRF nunchuk在配对模式" +
+                            "只要使用任何按钮开关它。" +
+                            "如果之前关机，则进入配对模式。",
                             false, false)
 //                VescIf.emitMessageDialog("Test", "test23", false, false)
                 break;

@@ -200,7 +200,7 @@ Item {
 
         Button {
             Layout.fillWidth: true
-            text: "Cancel"
+            text: "取消"
             Layout.margins: 10
             Layout.topMargin: -5
             Layout.bottomMargin: 0

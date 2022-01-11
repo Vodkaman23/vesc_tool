@@ -57,7 +57,7 @@ Item {
                 labelStep: maximumValue > 60 ? 20 : 10
                 value: 0
                 unitText: "A"
-                typeText: "Current"
+                typeText: "电流"
                 Layout.preferredWidth: gaugeSize
                 Layout.preferredHeight: gaugeSize
             }
@@ -70,7 +70,7 @@ Item {
                 labelStep: 20
                 value: 0
                 unitText: "%"
-                typeText: "Duty"
+                typeText: "占空比"
                 Layout.preferredWidth: gaugeSize
                 Layout.preferredHeight: gaugeSize
             }
@@ -98,7 +98,7 @@ Item {
                 labelStep: 1000
                 value: 0
                 unitText: "W"
-                typeText: "Power"
+                typeText: "功率"
                 Layout.preferredWidth: gaugeSize
                 Layout.preferredHeight: gaugeSize
             }
@@ -178,16 +178,16 @@ Item {
             powerGauge.value = (values.current_in * values.v_in)
 
             valText.text =
-                    "Battery    : " + parseFloat(values.v_in).toFixed(2) + " V\n" +
-                    "I Battery  : " + parseFloat(values.current_in).toFixed(2) + " A\n" +
-                    "Temp MOS   : " + parseFloat(values.temp_mos).toFixed(2) + " \u00B0C\n" +
-                    "Temp Motor : " + parseFloat(values.temp_motor).toFixed(2) + " \u00B0C\n" +
-                    "Ah Draw    : " + parseFloat(values.amp_hours * 1000.0).toFixed(1) + " mAh\n" +
-                    "Ah Charge  : " + parseFloat(values.amp_hours_charged * 1000.0).toFixed(1) + " mAh\n" +
-                    "Wh Draw    : " + parseFloat(values.watt_hours).toFixed(2) + " Wh\n" +
-                    "Wh Charge  : " + parseFloat(values.watt_hours_charged).toFixed(2) + " Wh\n" +
-                    "ABS Tacho  : " + values.tachometer_abs + " Counts\n" +
-                    "Fault      : " + values.fault_str
+                    "电池    : " + parseFloat(values.v_in).toFixed(2) + " V\n" +
+                    "电池电流  : " + parseFloat(values.current_in).toFixed(2) + " A\n" +
+                    "MOS温度   : " + parseFloat(values.temp_mos).toFixed(2) + " \u00B0C\n" +
+                    "电机温度 : " + parseFloat(values.temp_motor).toFixed(2) + " \u00B0C\n" +
+                    "已输出Ah    : " + parseFloat(values.amp_hours * 1000.0).toFixed(1) + " mAh\n" +
+                    "已回充Ah  : " + parseFloat(values.amp_hours_charged * 1000.0).toFixed(1) + " mAh\n" +
+                    "已输出Wh    : " + parseFloat(values.watt_hours).toFixed(2) + " Wh\n" +
+                    "已回充Wh  : " + parseFloat(values.watt_hours_charged).toFixed(2) + " Wh\n" +
+                    "ABS计数  : " + values.tachometer_abs + " Counts\n" +
+                    "报错      : " + values.fault_str
         }
     }
 }

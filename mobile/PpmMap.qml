@@ -41,11 +41,11 @@ Item {
 
     function updateDisplay() {
         resultArea.text =
-                "Value  : " + parseFloat(valueNow).toFixed(2) + "\n" +
-                "Now    : " + parseFloat(msNow).toFixed(4) + " ms\n" +
-                "Min    : " + parseFloat(msMin).toFixed(4) + " ms\n" +
-                "Max    : " + parseFloat(msMax).toFixed(4) + " ms\n" +
-                "Center : " + parseFloat(msCenter).toFixed(4) + " ms"
+                "数值  : " + parseFloat(valueNow).toFixed(2) + "\n" +
+                "现在    : " + parseFloat(msNow).toFixed(4) + " ms\n" +
+                "最低值    : " + parseFloat(msMin).toFixed(4) + " ms\n" +
+                "最高值    : " + parseFloat(msMax).toFixed(4) + " ms\n" +
+                "中值 : " + parseFloat(msCenter).toFixed(4) + " ms"
 
         valueBar.value = valueNow
     }
@@ -62,9 +62,8 @@ Item {
             VescIf.emitStatusMessage("Start, End and Center Pulselengths Applied", true)
             mCommands.setAppConf()
         } else {
-            VescIf.emitMessageDialog("Apply Mapping",
-                                     "Mapped values are not valid. Move the throttle to min, " +
-                                     "then to max and then leave it in the center.",
+            VescIf.emitMessageDialog("应用数值",
+                                     "数值无效。把油门调到最小，然后调到最大，然后把它留在中心。",
                                      false,
                                      false)
         }
@@ -107,7 +106,7 @@ Item {
         RowLayout {
             Layout.fillWidth: true
             Button {
-                text: "Help"
+                text: "帮助"
                 Layout.preferredWidth: 50
                 Layout.fillWidth: true
                 flat: true
@@ -120,7 +119,7 @@ Item {
             }
 
             Button {
-                text: "Reset"
+                text: "重置"
                 Layout.preferredWidth: 50
                 Layout.fillWidth: true
                 flat: true
@@ -131,7 +130,7 @@ Item {
         }
 
         Button {
-            text: "Apply and Write"
+            text: "应用并写入"
             Layout.fillWidth: true
             flat: true
             onClicked: {

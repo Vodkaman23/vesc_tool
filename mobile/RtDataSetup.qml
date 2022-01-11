@@ -72,7 +72,7 @@ Item {
                 labelStep: 1000
                 value: 1000
                 unitText: "W"
-                typeText: "Power"
+                typeText: "功率"
             }
 
             CustomGauge {
@@ -85,7 +85,7 @@ Item {
                 maximumValue: 60
                 labelStep: maximumValue > 60 ? 20 : 10
                 unitText: "A"
-                typeText: "Current"
+                typeText: "电流"
             }
         }
         
@@ -101,7 +101,7 @@ Item {
             labelStep: maximumValue > 60 ? 20 : 10
             value: 20
             unitText: VescIf.useImperialUnits() ? "mph" : "km/h"
-            typeText: "Speed"
+            typeText: "速度"
         }
 
         RowLayout {
@@ -120,7 +120,7 @@ Item {
                 maximumValue: 100
                 value: 95
                 unitText: "%"
-                typeText: "Battery"
+                typeText: "电池"
                 traceColor: "green"
             }
 
@@ -135,7 +135,7 @@ Item {
                 labelStep: 20
                 value: 0
                 unitText: "%"
-                typeText: "Duty"
+                typeText: "占空比"
             }
         }
 
@@ -222,7 +222,7 @@ Item {
 
                                 Text {
                                     color: "white"
-                                    text: "Odometer"
+                                    text: "里程计"
                                     font.bold: true
                                     horizontalAlignment: Text.AlignHCenter
                                     Layout.fillWidth: true
@@ -286,18 +286,18 @@ Item {
             powerGauge.value = (values.current_in * values.v_in)
 
             valText.text =
-                    "VESCs  : " + values.num_vescs + "\n" +
-                    "mAh Out: " + parseFloat(values.amp_hours * 1000.0).toFixed(1) + "\n" +
-                    "mAh In : " + parseFloat(values.amp_hours_charged * 1000.0).toFixed(1)
+                    "VESC数  : " + values.num_vescs + "\n" +
+                    "已输出mAh: " + parseFloat(values.amp_hours * 1000.0).toFixed(1) + "\n" +
+                    "已回充mAh : " + parseFloat(values.amp_hours_charged * 1000.0).toFixed(1)
 
             odometerValue = values.odometer;
             
             var wh_km = (values.watt_hours - values.watt_hours_charged) / (values.tachometer_abs / 1000.0)
 
-            var l1Txt = useImperial ? "mi Trip : " : "km Trip : "
-            var l2Txt = useImperial ? "mi ODO  : " : "km ODO  : "
-            var l3Txt = useImperial ? "Wh/mi   : " : "Wh/km   : "
-            var l4Txt = useImperial ? "mi Range: " : "km Range: "
+            var l1Txt = useImperial ? "此次里程mi : " : "此次里程km : "
+            var l2Txt = useImperial ? "里程计mi  : " : "里程计km  : "
+            var l3Txt = useImperial ? "功耗Wh/mi   : " : "功耗Wh/km   : "
+            var l4Txt = useImperial ? "预计里程mi: " : "预计续航km: "
 
             valText2.text =
                     l1Txt + parseFloat((values.tachometer_abs * impFact) / 1000.0).toFixed(3) + "\n" +

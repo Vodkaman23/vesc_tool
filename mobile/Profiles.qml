@@ -92,7 +92,7 @@ Item {
         focus: true
         width: parent.width - 20
         closePolicy: Popup.CloseOnEscape
-        title: "Remove profile"
+        title: "删除档位"
         x: 10
         y: 10 + parent.height / 2 - height / 2
         parent: ApplicationWindow.overlay
@@ -102,7 +102,7 @@ Item {
             verticalAlignment: Text.AlignVCenter
             anchors.fill: parent
             wrapMode: Text.WordWrap
-            text: "This is going to delete this profile. Are you sure?"
+            text: "这将删除该档位，确定吗？"
         }
 
         onAccepted: {
@@ -135,7 +135,7 @@ Item {
             Button {
                 Layout.preferredWidth: 100
                 Layout.fillWidth: true
-                text: "Add Profile"
+                text: "添加档位"
 
                 onClicked: {
                     editor.profileName = "New profile"
@@ -155,7 +155,7 @@ Item {
                     width: 500
 
                     MenuItem {
-                        text: "Remove All Profiles"
+                        text: "清除所有档位"
                         onTriggered: {
                             clearDialog.open()
                         }
@@ -172,7 +172,7 @@ Item {
         focus: true
         width: column.width - 20
         closePolicy: Popup.CloseOnEscape
-        title: "Remove all profiles"
+        title: "清除所有档位"
 
         x: 10
         y: column.y + column.height / 2 - height / 2
@@ -183,7 +183,7 @@ Item {
             anchors.fill: parent
             wrapMode: Text.WordWrap
             text:
-                "This is going to remove all your profiles. Are you sure?"
+                "这将清除所有档位，确定吗？"
         }
 
         onAccepted: {

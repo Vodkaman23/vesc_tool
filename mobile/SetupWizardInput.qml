@@ -88,7 +88,7 @@ Item {
 
     Dialog {
         id: commDialog
-        title: "Communicating..."
+        title: "通讯中..."
         closePolicy: Popup.NoAutoClose
         modal: true
         focus: true
@@ -220,25 +220,25 @@ Item {
                         id: inputModel
 
                         ListElement {
-                            name: "PPM input, such as conventional RC receivers."
+                            name: "PPM遥控，比如RC遥控"
                             img: "qrc:/res/images/rc_rx.jpg"
                             apptype: 4 // PPM_UART
                         }
 
                         ListElement {
-                            name: "NRF controller."
+                            name: "NRF 遥控器."
                             img: "qrc:/res/images/vedder_nunchuk.jpg"
                             apptype: 3 // UART, assume permanent NRF or NRF51 on UART
                         }
 
                         ListElement {
-                            name: "ADC input, such as conventional ebike throttles."
+                            name: "ADC 输入, 比如电动车油门."
                             img: "qrc:/res/images/ebike_throttle.jpg"
                             apptype: 5 // ADC
                         }
 
                         ListElement {
-                            name: 'Wireless nyko kama nunchuk.<br><font color="red"><b>Warning:</b></font> will disable UART'
+                            name: '无线 nyko kama nunchuk.<br><font color="red"><b>Warning:</b></font> 会禁用UART'
                             img: "qrc:/res/images/nunchuk.jpg"
                             apptype: 6 // NUNCHUK
                         }
@@ -327,7 +327,7 @@ Item {
                     Text {
                         Layout.fillWidth: true
                         color: "white"
-                        text: qsTr("Move the throttle(s) from min to max, then leave it in the center.")
+                        text: qsTr("油门从最小推到最大, 然后留在中位.")
                         font.bold: true
                         horizontalAlignment: Text.AlignHCenter
                         wrapMode: Text.WordWrap
@@ -376,7 +376,7 @@ Item {
 
                     Button {
                         Layout.fillWidth: true
-                        text: "Write Configuration"
+                        text: "写入"
 
                         onClicked: {
                             mCommands.setAppConf()
@@ -431,7 +431,7 @@ Item {
                 id: prevButton
                 Layout.fillWidth: true
                 Layout.preferredWidth: 500
-                text: "Cancel"
+                text: "取消"
                 flat: true
 
                 onClicked: {
@@ -460,7 +460,7 @@ Item {
                 id: nextButton
                 Layout.fillWidth: true
                 Layout.preferredWidth: 500
-                text: "Next"
+                text: "下一步"
                 flat: true
 
                 onClicked: {
@@ -614,7 +614,7 @@ Item {
         focus: true
         width: parent.width - 20
         closePolicy: Popup.CloseOnEscape
-        title: "NRF Pairing"
+        title: "NRF 配对"
 
         parent: ApplicationWindow.overlay
         x: 10
@@ -627,11 +627,11 @@ Item {
             anchors.fill: parent
             wrapMode: Text.WordWrap
             text:
-                "You have chosen NRF input, which requires pairing. To start the " +
-                "pairing process, click ok and then switch on your remote. This " +
-                "will put the VESC in pairing mode for 10 seconds. You can restart " +
-                "the pairing process with the START button in the NRF Pairing box if " +
-                "needed."
+                "您已经选择了NRF输入，这需要配对。" +
+                "要开始配对过程，请单击“确定”，然后打开遥控器。" +
+                "这将使VESC处于配对模式10秒。" +
+                "如果需要，可以使用NRF配对框中的START按钮重新启动配对过程。"
+
         }
 
         onAccepted: {
@@ -641,15 +641,15 @@ Item {
 
     function updateButtonText() {
         if (stackLayout.currentIndex == (stackLayout.count - 1)) {
-            nextButton.text = "Finish"
+            nextButton.text = "结束"
         } else {
-            nextButton.text = "Next"
+            nextButton.text = "下一步"
         }
 
         if (stackLayout.currentIndex == 0) {
-            prevButton.text = "Cancel"
+            prevButton.text = "取消"
         } else {
-            prevButton.text = "Previous"
+            prevButton.text = "上一步"
         }
     }
 

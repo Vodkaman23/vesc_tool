@@ -99,7 +99,7 @@ Item {
                     CheckBox {
                         id: acceptUsageBox
                         Layout.fillWidth: true
-                        text: "Yes, I understand and accept"
+                        text: "是，我明白并接受"
 
                         onToggled: {
                             updateButtonsEnabled()
@@ -135,7 +135,7 @@ Item {
                     CheckBox {
                         id: acceptWarrantyBox
                         Layout.fillWidth: true
-                        text: "Yes, I understand and accept"
+                        text: "是，我明白并接受"
 
                         onToggled: {
                             updateButtonsEnabled()
@@ -205,7 +205,7 @@ Item {
                 id: prevButton
                 Layout.fillWidth: true
                 Layout.preferredWidth: 500
-                text: "Cancel"
+                text: "取消"
                 flat: true
 
                 onClicked: {
@@ -223,7 +223,7 @@ Item {
                 id: nextButton
                 Layout.fillWidth: true
                 Layout.preferredWidth: 500
-                text: "Next"
+                text: "下一步"
                 flat: true
 
                 onClicked: {
@@ -264,7 +264,7 @@ Item {
                 verticalAlignment: Text.AlignVCenter
                 anchors.fill: parent
                 wrapMode: Text.WordWrap
-                text: "You must finish the introduction in order to use VESC Tool."
+                text: "必须完成介绍才能使用VESC工具"
             }
         }
 
@@ -275,15 +275,15 @@ Item {
 
     function updateButtonText() {
         if (stackLayout.currentIndex == (stackLayout.count - 1)) {
-            nextButton.text = "Finish"
+            nextButton.text = "结束"
         } else {
-            nextButton.text = "Next"
+            nextButton.text = "下一步"
         }
 
         if (stackLayout.currentIndex == 0) {
-            prevButton.text = "Cancel"
+            prevButton.text = "取消"
         } else {
-            prevButton.text = "Previous"
+            prevButton.text = "上一步"
         }
 
         updateButtonsEnabled()

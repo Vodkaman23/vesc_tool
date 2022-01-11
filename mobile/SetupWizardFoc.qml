@@ -76,7 +76,7 @@ Item {
                         id: motorModel
 
                         ListElement {
-                            name: "Mini Outrunner (~75 g)"
+                            name: "迷你外转子 (~75 g)"
                             motorImg: "qrc:/res/images/motors/outrunner_mini.jpg"
                             maxLosses: 10
                             openloopErpm: 1400
@@ -84,7 +84,7 @@ Item {
                             poles: 14
                         }
                         ListElement {
-                            name: "Small Outrunner (~200 g)"
+                            name: "小型外转子 (~200 g)"
                             motorImg: "qrc:/res/images/motors/outrunner_small.jpg"
                             maxLosses: 25
                             openloopErpm: 1400
@@ -92,7 +92,7 @@ Item {
                             poles: 14
                         }
                         ListElement {
-                            name: "Medium Outrunner (~750 g)"
+                            name: "中型外转子 电滑选这个(~750 g)"
                             motorImg: "qrc:/res/images/motors/6374.jpg"
                             maxLosses: 60
                             openloopErpm: 700
@@ -100,7 +100,7 @@ Item {
                             poles: 14
                         }
                         ListElement {
-                            name: "Large Outrunner (~2000 g)"
+                            name: "大型外转子 (~2000 g)"
                             motorImg: "qrc:/res/icons/motor.png"
                             maxLosses: 200
                             openloopErpm: 700
@@ -108,7 +108,7 @@ Item {
                             poles: 14
                         }
                         ListElement {
-                            name: "Small Inrunner (~200 g)"
+                            name: "小型内转子 (~200 g)"
                             motorImg: "qrc:/res/images/motors/inrunner_small.jpg"
                             maxLosses: 25
                             openloopErpm: 1400
@@ -116,7 +116,7 @@ Item {
                             poles: 2
                         }
                         ListElement {
-                            name: "Medium Inrunner (~750 g)"
+                            name: "中型内转子 (~750 g)"
                             motorImg: "qrc:/res/images/motors/inrunner_medium.jpg"
                             maxLosses: 70
                             openloopErpm: 1400
@@ -124,7 +124,7 @@ Item {
                             poles: 4
                         }
                         ListElement {
-                            name: "Large Inrunner (~2000 g)"
+                            name: "大型内转子 (~2000 g)"
                             motorImg: "qrc:/res/icons/motor.png"
                             maxLosses: 200
                             openloopErpm: 1000
@@ -132,7 +132,7 @@ Item {
                             poles: 4
                         }
                         ListElement {
-                            name: "E-Bike DD hub motor (~6 kg)"
+                            name: "电动车轮毂电机 (~6 kg)"
                             motorImg: "qrc:/res/images/motors/ebike_dd_1kw.jpg"
                             maxLosses: 75
                             openloopErpm: 300
@@ -140,7 +140,7 @@ Item {
                             poles: 46
                         }
                         ListElement {
-                            name: "EDF Inrunner Small (~200 g)"
+                            name: "小型 EDF 内转子 (~200 g)"
                             motorImg: "qrc:/res/images/motors/edf_small.jpg"
                             maxLosses: 55
                             openloopErpm: 1400
@@ -362,7 +362,7 @@ Item {
                                     realFrom: 0
                                     realTo: -9999
                                     realValue: 0
-                                    prefix: "Battery Current Regen: "
+                                    prefix: "回充电池电流（电池上限/2）: "
                                     suffix: " A"
                                 }
 
@@ -374,7 +374,7 @@ Item {
                                     realFrom: 0
                                     realTo: 9999
                                     realValue: 0
-                                    prefix: "Battery Current Max: "
+                                    prefix: "电池电流（电池上限/2）: "
                                     suffix: " A"
                                 }
                             }
@@ -406,7 +406,7 @@ Item {
 
                                     CheckBox {
                                         id: directDriveBox
-                                        text: "Direct Drive"
+                                        text: "直驱"
                                         Layout.fillWidth: true
                                     }
 
@@ -518,7 +518,7 @@ Item {
                 id: prevButton
                 Layout.fillWidth: true
                 Layout.preferredWidth: 500
-                text: "Cancel"
+                text: "取消"
                 flat: true
 
                 onClicked: {
@@ -536,7 +536,7 @@ Item {
                 id: nextButton
                 Layout.fillWidth: true
                 Layout.preferredWidth: 500
-                text: "Next"
+                text: "下一步"
                 flat: true
 
                 onClicked: {
@@ -553,8 +553,8 @@ Item {
                             if (VescIf.isPortConnected()) {
                                 detectDialog.open()
                             } else {
-                                VescIf.emitMessageDialog("Detect Motors",
-                                                         "Not connected to the VESC. Please connect in order to run detection.",
+                                VescIf.emitMessageDialog("检测电机",
+                                                         "未连接到VESC，请连接再尝试电机检测",
                                                          false, false)
                             }
                         }
@@ -576,7 +576,7 @@ Item {
         focus: true
         width: parent.width - 20
         closePolicy: Popup.CloseOnEscape
-        title: "Load Default Parameters"
+        title: "载入默认设置"
         parent: ApplicationWindow.overlay
 
         x: 10
@@ -587,9 +587,8 @@ Item {
             verticalAlignment: Text.AlignVCenter
             anchors.fill: parent
             wrapMode: Text.WordWrap
-            text: "Would you like to restore this VESC, and all VESCs on the CAN-bus (if any), " +
-                  "to their default settings before proceeding?"
-        }
+            text: "你想要把连接的所有VESC的设置都恢复为默认设置吗？ "
+                  }
 
         onAccepted: {
             disableDialog()
@@ -606,7 +605,7 @@ Item {
         focus: true
         width: parent.width - 20
         closePolicy: Popup.CloseOnEscape
-        title: "Motor Selection"
+        title: "选择电机"
         x: 10
         y: 10 + parent.height / 2 - height / 2
         parent: ApplicationWindow.overlay
@@ -616,9 +615,8 @@ Item {
             verticalAlignment: Text.AlignVCenter
             anchors.fill: parent
             wrapMode: Text.WordWrap
-            text: "Warning: Choosing a significantly too large motor for detection is likely to destroy the motor " +
-                  "during detection. It is important to choose a motor size similar to the motor you are using. " +
-                  "Are you sure that your motor selection is within range?"
+            text: "警告:选择太大的电机进行检测可能会在检测过程中损坏电机。" +
+                  "重要的是要选择与你使用的电机尺寸相似的电机。你确定你选择的电机在范围内吗?”"
         }
 
         onAccepted: {
@@ -635,7 +633,7 @@ Item {
         focus: true
         width: parent.width - 20
         closePolicy: Popup.CloseOnEscape
-        title: "Battery Settings"
+        title: "电池设置"
         x: 10
         y: 10 + parent.height / 2 - height / 2
         parent: ApplicationWindow.overlay
@@ -645,10 +643,9 @@ Item {
             verticalAlignment: Text.AlignVCenter
             anchors.fill: parent
             wrapMode: Text.WordWrap
-            text: "Warning: You have not specified battery current limits, which essentially only limits " +
-                  "the current if the voltage drops too much. This is fine in most cases, but check with " +
-                  "your battery and BMS specification to be safe. Keep in mind that you have to divide the " +
-                  "battery current settings by the number of VESCs."
+            text: "警告:您没有指定电池电流限制，这基本上只限制了电压下降太多时的电流。" +
+                  "这在大多数情况下是可以的，但请检查您的电池和BMS规格为安全。" +
+                  "请记住，你必须将电池电流设置除以vesc的数量。"
         }
 
         onAccepted: {
@@ -664,7 +661,7 @@ Item {
         focus: true
         width: parent.width - 20
         closePolicy: Popup.CloseOnEscape
-        title: "Detect FOC Parameters"
+        title: "检测FOC参数"
         parent: ApplicationWindow.overlay
 
         x: 10
@@ -675,8 +672,7 @@ Item {
             verticalAlignment: Text.AlignVCenter
             anchors.fill: parent
             wrapMode: Text.WordWrap
-            text: "This is going to spin up all motors. Make " +
-                  "sure that nothing is in the way."
+            text: "这将转动电机，确保电机悬空。"
         }
 
         onAccepted: {
@@ -701,7 +697,7 @@ Item {
                                             sensorlessBox.realValue)
 
             var resDetect = false
-            if (res.startsWith("Success!")) {
+            if (res.startsWith("成功！")) {
                 resDetect = true
                 Utility.setBatteryCutCanFromCurrentConfig(VescIf, canDevs);
             }
@@ -713,7 +709,7 @@ Item {
                 updateButtonText()
             }
 
-            resultDialog.title = "Detection Result"
+            resultDialog.title = "检测结果"
             resultLabel.text = res
             resultDialog.open()
         }
@@ -767,17 +763,17 @@ Item {
 
     function updateButtonText() {
         if (stackLayout.currentIndex == (stackLayout.count - 1)) {
-            nextButton.text = "Finish"
+            nextButton.text = "结束"
         } else if (stackLayout.currentIndex == (stackLayout.count - 2)) {
-            nextButton.text = "Run Detection"
+            nextButton.text = "开始检测"
         } else {
-            nextButton.text = "Next"
+            nextButton.text = "下一步"
         }
 
         if (stackLayout.currentIndex == 0) {
-            prevButton.text = "Cancel"
+            prevButton.text = "取消"
         } else {
-            prevButton.text = "Previous"
+            prevButton.text = "上一步"
         }
     }
 
@@ -797,7 +793,7 @@ Item {
 
     Dialog {
         id: commDialog
-        title: "Processing..."
+        title: "处理中..."
         closePolicy: Popup.NoAutoClose
         modal: true
         focus: true

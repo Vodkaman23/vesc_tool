@@ -44,15 +44,15 @@ Item {
         var speedUnit = useImperial ? "mph\n" : "km/h\n"
 
         infoText.text =
-                "Speed Forward   : " + parseFloat(cfg.erpm_or_speed_max * 3.6 * impFact).toFixed(1) + speedUnit +
-                "Speed Reverse   : " + parseFloat(-cfg.erpm_or_speed_min * 3.6 * impFact).toFixed(1) + speedUnit +
-                "Current Accel   : " + parseFloat(cfg.current_max_scale * 100).toFixed(0) + " %\n" +
-                "Current Brake   : " + parseFloat(cfg.current_min_scale * 100).toFixed(0) + " %"
+                "前进速度   : " + parseFloat(cfg.erpm_or_speed_max * 3.6 * impFact).toFixed(1) + speedUnit +
+                "后退速度   : " + parseFloat(-cfg.erpm_or_speed_min * 3.6 * impFact).toFixed(1) + speedUnit +
+                "前进电流   : " + parseFloat(cfg.current_max_scale * 100).toFixed(0) + " %\n" +
+                "刹车电流   : " + parseFloat(cfg.current_min_scale * 100).toFixed(0) + " %"
 
         if (cfg.watt_max < 1400000 || cfg.watt_min > -1400000) {
             infoText.text += "\n" +
-                    "Max Power Out   : " + parseFloat(cfg.watt_max).toFixed(1) + " W\n" +
-                    "Max Power Regen : " + parseFloat(cfg.watt_min).toFixed(1) + " W"
+                    "最高输出功率   : " + parseFloat(cfg.watt_max).toFixed(1) + " W\n" +
+                    "最高回充功率 : " + parseFloat(cfg.watt_min).toFixed(1) + " W"
         }
     }
 
@@ -118,7 +118,7 @@ Item {
                 Button {
                     id: upButton
                     flat: true
-                    text: "UP"
+                    text: "上"
                     onClicked: {
                         VescIf.moveProfileUp(index)
                         VescIf.storeSettings()
@@ -130,7 +130,7 @@ Item {
                     Layout.fillWidth: true
                     Layout.preferredWidth: 500
                     flat: true
-                    text: "Use until reboot"
+                    text: "使用直至重启"
                     onClicked: {
                         mCommands.setMcconfTemp(VescIf.getProfile(index),
                                                 true, false, true, false, true)
@@ -141,7 +141,7 @@ Item {
                 Button {
                     id: editButton
                     flat: true
-                    text: "Edit"
+                    text: "编辑"
                     onClicked: {
                         editRequested(index)
                     }
@@ -150,7 +150,7 @@ Item {
                 Button {
                     id: downButton
                     flat: true
-                    text: "DOWN"
+                    text: "下"
                     onClicked: {
                         VescIf.moveProfileDown(index)
                         VescIf.storeSettings()
@@ -162,7 +162,7 @@ Item {
                     Layout.fillWidth: true
                     Layout.preferredWidth: 500
                     flat: true
-                    text: "Use permanently"
+                    text: "永久使用"
                     onClicked: {
                         permanentDialog.open()
                     }
@@ -185,8 +185,7 @@ Item {
                             verticalAlignment: Text.AlignVCenter
                             anchors.fill: parent
                             wrapMode: Text.WordWrap
-                            text: "This is going to apply this profile permanently, even after reboot. Are " +
-                                  "you sure?"
+                            text: "这将永久使用档位，重启后也不会复位"
                         }
 
                         onAccepted: {
@@ -200,7 +199,7 @@ Item {
                 Button {
                     id: deleteButton
                     flat: true
-                    text: "Delete"
+                    text: "删除"
                     onClicked: {
                         deleteRequested(index)
                     }
