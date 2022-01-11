@@ -2,7 +2,7 @@
 <ConfigParams>
     <Params>
         <pwm_mode>
-            <longName>PWM Mode</longName>
+            <longName>PWM模式</longName>
             <type>4</type>
             <transmittable>1</transmittable>
             <description>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -17,7 +17,7 @@ p, li { white-space: pre-wrap; }
             <enumNames>Bipolar</enumNames>
         </pwm_mode>
         <comm_mode>
-            <longName>Commutation Mode</longName>
+            <longName>通讯模式</longName>
             <type>4</type>
             <transmittable>1</transmittable>
             <description>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -35,7 +35,7 @@ p, li { white-space: pre-wrap; }
             <enumNames>Delay</enumNames>
         </comm_mode>
         <motor_type>
-            <longName>Motor Type</longName>
+            <longName>电机样式</longName>
             <type>4</type>
             <transmittable>1</transmittable>
             <description>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -61,7 +61,7 @@ p, li { white-space: pre-wrap; }
             <enumNames>GPD</enumNames>
         </motor_type>
         <sensor_mode>
-            <longName>Sensor Mode</longName>
+            <longName>传感器模式</longName>
             <type>4</type>
             <transmittable>1</transmittable>
             <description>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -71,12 +71,12 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Sensor mode for BLDC commutation. Hybrid means that sensors will be used at low speed and sensorless at high speed.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</description>
             <cDefine>MCCONF_SENSOR_MODE</cDefine>
             <valInt>0</valInt>
-            <enumNames>Sensorless</enumNames>
-            <enumNames>Sensored</enumNames>
-            <enumNames>Hybrid</enumNames>
+            <enumNames>无传感器</enumNames>
+            <enumNames>有传感器</enumNames>
+            <enumNames>混合</enumNames>
         </sensor_mode>
         <l_current_max>
-            <longName>Motor Current Max</longName>
+            <longName>最高电机电流</longName>
             <type>1</type>
             <transmittable>1</transmittable>
             <description>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -98,7 +98,7 @@ p, li { white-space: pre-wrap; }
             <vTx>9</vTx>
         </l_current_max>
         <l_current_min>
-            <longName>Motor Current Max Brake</longName>
+            <longName>最高刹车电流</longName>
             <type>1</type>
             <transmittable>1</transmittable>
             <description>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -120,7 +120,7 @@ p, li { white-space: pre-wrap; }
             <vTx>9</vTx>
         </l_current_min>
         <l_in_current_max>
-            <longName>Battery Current Max</longName>
+            <longName>最高电池电流</longName>
             <type>1</type>
             <transmittable>1</transmittable>
             <description>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -142,7 +142,7 @@ p, li { white-space: pre-wrap; }
             <vTx>9</vTx>
         </l_in_current_max>
         <l_in_current_min>
-            <longName>Battery Current Max Regen</longName>
+            <longName>最高电池回充电流</longName>
             <type>1</type>
             <transmittable>1</transmittable>
             <description>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -164,7 +164,7 @@ p, li { white-space: pre-wrap; }
             <vTx>9</vTx>
         </l_in_current_min>
         <l_abs_current_max>
-            <longName>Absolute Maximum Current</longName>
+            <longName>绝对最高电流</longName>
             <type>1</type>
             <transmittable>1</transmittable>
             <description>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -186,7 +186,7 @@ p, li { white-space: pre-wrap; }
             <vTx>9</vTx>
         </l_abs_current_max>
         <l_min_erpm>
-            <longName>Max ERPM Reverse</longName>
+            <longName>最高倒退ERPM</longName>
             <type>1</type>
             <transmittable>1</transmittable>
             <description>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -208,7 +208,7 @@ p, li { white-space: pre-wrap; }
             <vTx>9</vTx>
         </l_min_erpm>
         <l_max_erpm>
-            <longName>Max ERPM</longName>
+            <longName>最高ERPM</longName>
             <type>1</type>
             <transmittable>1</transmittable>
             <description>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -230,7 +230,7 @@ p, li { white-space: pre-wrap; }
             <vTx>9</vTx>
         </l_max_erpm>
         <l_erpm_start>
-            <longName>ERPM Limit Start</longName>
+            <longName>ERPM限制开始</longName>
             <type>1</type>
             <transmittable>1</transmittable>
             <description>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -252,7 +252,7 @@ p, li { white-space: pre-wrap; }
             <vTx>9</vTx>
         </l_erpm_start>
         <l_max_erpm_fbrake>
-            <longName>Max ERPM Full Brake</longName>
+            <longName>最高ERPM全力刹车</longName>
             <type>1</type>
             <transmittable>1</transmittable>
             <description>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -274,7 +274,7 @@ p, li { white-space: pre-wrap; }
             <vTx>9</vTx>
         </l_max_erpm_fbrake>
         <l_max_erpm_fbrake_cc>
-            <longName>Max ERPM Full Brake Current Control</longName>
+            <longName>电流控制最高ERPM全力刹车</longName>
             <type>1</type>
             <transmittable>1</transmittable>
             <description>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -296,7 +296,7 @@ p, li { white-space: pre-wrap; }
             <vTx>9</vTx>
         </l_max_erpm_fbrake_cc>
         <l_min_vin>
-            <longName>Minimum Input Voltage</longName>
+            <longName>最低输入电压</longName>
             <type>1</type>
             <transmittable>1</transmittable>
             <description>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -318,7 +318,7 @@ p, li { white-space: pre-wrap; }
             <vTx>9</vTx>
         </l_min_vin>
         <l_max_vin>
-            <longName>Maximum Input Voltage</longName>
+            <longName>最高输入电压</longName>
             <type>1</type>
             <transmittable>1</transmittable>
             <description>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -340,7 +340,7 @@ p, li { white-space: pre-wrap; }
             <vTx>9</vTx>
         </l_max_vin>
         <l_battery_cut_start>
-            <longName>Battery Voltage Cutoff Start</longName>
+            <longName>低电压断电开始</longName>
             <type>1</type>
             <transmittable>1</transmittable>
             <description>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -362,7 +362,7 @@ p, li { white-space: pre-wrap; }
             <vTx>9</vTx>
         </l_battery_cut_start>
         <l_battery_cut_end>
-            <longName>Battery Voltage Cutoff End</longName>
+            <longName>低电压断电结束</longName>
             <type>1</type>
             <transmittable>1</transmittable>
             <description>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -396,7 +396,7 @@ p, li { white-space: pre-wrap; }
             <valInt>1</valInt>
         </l_slow_abs_current>
         <l_temp_fet_start>
-            <longName>MOSFET Temp Cutoff Start</longName>
+            <longName>MOS温度限制开始</longName>
             <type>1</type>
             <transmittable>1</transmittable>
             <description>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -418,7 +418,7 @@ p, li { white-space: pre-wrap; }
             <vTx>9</vTx>
         </l_temp_fet_start>
         <l_temp_fet_end>
-            <longName>MOSFET Temp Cutoff End</longName>
+            <longName>MOS温度限制开始</longName>
             <type>1</type>
             <transmittable>1</transmittable>
             <description>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -440,7 +440,7 @@ p, li { white-space: pre-wrap; }
             <vTx>9</vTx>
         </l_temp_fet_end>
         <l_temp_motor_start>
-            <longName>Motor Temp Cutoff Start</longName>
+            <longName>电机温度限制开始</longName>
             <type>1</type>
             <transmittable>1</transmittable>
             <description>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -462,7 +462,7 @@ p, li { white-space: pre-wrap; }
             <vTx>9</vTx>
         </l_temp_motor_start>
         <l_temp_motor_end>
-            <longName>Motor Temp Cutoff End</longName>
+            <longName>电机温度限制结束</longName>
             <type>1</type>
             <transmittable>1</transmittable>
             <description>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -506,7 +506,7 @@ p, li { white-space: pre-wrap; }
             <vTx>9</vTx>
         </l_temp_accel_dec>
         <l_min_duty>
-            <longName>Minimum Duty Cycle</longName>
+            <longName>最低占空比</longName>
             <type>1</type>
             <transmittable>1</transmittable>
             <description>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -528,7 +528,7 @@ p, li { white-space: pre-wrap; }
             <vTx>9</vTx>
         </l_min_duty>
         <l_max_duty>
-            <longName>Maximum Duty Cycle</longName>
+            <longName>最高占空比</longName>
             <type>1</type>
             <transmittable>1</transmittable>
             <description>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -550,7 +550,7 @@ p, li { white-space: pre-wrap; }
             <vTx>9</vTx>
         </l_max_duty>
         <l_watt_max>
-            <longName>Maximum Wattage</longName>
+            <longName>最高功率</longName>
             <type>1</type>
             <transmittable>1</transmittable>
             <description>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -574,7 +574,7 @@ p, li { white-space: pre-wrap; }
             <vTx>9</vTx>
         </l_watt_max>
         <l_watt_min>
-            <longName>Maximum Braking Wattage</longName>
+            <longName>最高刹车功率</longName>
             <type>1</type>
             <transmittable>1</transmittable>
             <description>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -2736,7 +2736,7 @@ p, li { white-space: pre-wrap; }
             <vTx>5</vTx>
         </m_encoder_counts>
         <m_sensor_port_mode>
-            <longName>Sensor Port Mode</longName>
+            <longName>传感器接口模式</longName>
             <type>4</type>
             <transmittable>1</transmittable>
             <description>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -2772,7 +2772,7 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Sans Serif';&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</description>
             <cDefine>MCCONF_M_SENSOR_PORT_MODE</cDefine>
             <valInt>0</valInt>
-            <enumNames>Hall Sensors</enumNames>
+            <enumNames>霍尔</enumNames>
             <enumNames>ABI Encoder</enumNames>
             <enumNames>AS5047 Encoder</enumNames>
             <enumNames>AD2S1205 Resolver</enumNames>
@@ -2782,7 +2782,7 @@ p, li { white-space: pre-wrap; }
             <enumNames>MT6816 Encoder (SPI)</enumNames>
         </m_sensor_port_mode>
         <m_invert_direction>
-            <longName>Invert Motor Direction</longName>
+            <longName>电机反向</longName>
             <type>5</type>
             <transmittable>1</transmittable>
             <description>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -2794,7 +2794,7 @@ p, li { white-space: pre-wrap; }
             <valInt>0</valInt>
         </m_invert_direction>
         <m_drv8301_oc_mode>
-            <longName>DRV8301 OC Mode</longName>
+            <longName>DRV8301 OC 模式</longName>
             <type>4</type>
             <transmittable>1</transmittable>
             <description>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -3594,9 +3594,9 @@ p, li { white-space: pre-wrap; }
     </SerOrder>
     <Grouping>
         <group>
-            <groupName>General</groupName>
+            <groupName>模式</groupName>
             <subgroup>
-                <subgroupName>General</subgroupName>
+                <subgroupName>通用设置</subgroupName>
                 <subgroupParams>
                     <param>motor_type</param>
                     <param>m_invert_direction</param>
@@ -3605,7 +3605,7 @@ p, li { white-space: pre-wrap; }
                 </subgroupParams>
             </subgroup>
             <subgroup>
-                <subgroupName>Current</subgroupName>
+                <subgroupName>电流</subgroupName>
                 <subgroupParams>
                     <param>::sep::Motor</param>
                     <param>l_current_max</param>
@@ -3623,14 +3623,14 @@ p, li { white-space: pre-wrap; }
                 </subgroupParams>
             </subgroup>
             <subgroup>
-                <subgroupName>Voltage</subgroupName>
+                <subgroupName>电压</subgroupName>
                 <subgroupParams>
                     <param>l_battery_cut_start</param>
                     <param>l_battery_cut_end</param>
                 </subgroupParams>
             </subgroup>
             <subgroup>
-                <subgroupName>RPM</subgroupName>
+                <subgroupName>转速（RPM）</subgroupName>
                 <subgroupParams>
                     <param>l_max_erpm</param>
                     <param>l_min_erpm</param>
@@ -3638,14 +3638,14 @@ p, li { white-space: pre-wrap; }
                 </subgroupParams>
             </subgroup>
             <subgroup>
-                <subgroupName>Wattage</subgroupName>
+                <subgroupName>功率</subgroupName>
                 <subgroupParams>
                     <param>l_watt_max</param>
                     <param>l_watt_min</param>
                 </subgroupParams>
             </subgroup>
             <subgroup>
-                <subgroupName>Temperature</subgroupName>
+                <subgroupName>温度</subgroupName>
                 <subgroupParams>
                     <param>::sep::General</param>
                     <param>l_temp_accel_dec</param>
@@ -3668,7 +3668,7 @@ p, li { white-space: pre-wrap; }
                 </subgroupParams>
             </subgroup>
             <subgroup>
-                <subgroupName>Advanced</subgroupName>
+                <subgroupName>高级</subgroupName>
                 <subgroupParams>
                     <param>l_min_vin</param>
                     <param>l_max_vin</param>
@@ -3688,7 +3688,7 @@ p, li { white-space: pre-wrap; }
         <group>
             <groupName>BLDC</groupName>
             <subgroup>
-                <subgroupName>General</subgroupName>
+                <subgroupName>通用设置</subgroupName>
                 <subgroupParams>
                     <param>sensor_mode</param>
                     <param>comm_mode</param>
@@ -3737,7 +3737,7 @@ p, li { white-space: pre-wrap; }
         <group>
             <groupName>DC</groupName>
             <subgroup>
-                <subgroupName>General</subgroupName>
+                <subgroupName>通用设置</subgroupName>
                 <subgroupParams>
                     <param>cc_gain</param>
                     <param>cc_ramp_step_max</param>
@@ -3750,7 +3750,7 @@ p, li { white-space: pre-wrap; }
         <group>
             <groupName>FOC</groupName>
             <subgroup>
-                <subgroupName>General</subgroupName>
+                <subgroupName>通用设置</subgroupName>
                 <subgroupParams>
                     <param>foc_sensor_mode</param>
                     <param>foc_motor_r</param>
@@ -3762,7 +3762,7 @@ p, li { white-space: pre-wrap; }
                 </subgroupParams>
             </subgroup>
             <subgroup>
-                <subgroupName>Sensorless</subgroupName>
+                <subgroupName>无传感器</subgroupName>
                 <subgroupParams>
                     <param>foc_openloop_rpm</param>
                     <param>foc_openloop_rpm_low</param>
@@ -3776,7 +3776,7 @@ p, li { white-space: pre-wrap; }
                 </subgroupParams>
             </subgroup>
             <subgroup>
-                <subgroupName>Hall Sensors</subgroupName>
+                <subgroupName>霍尔</subgroupName>
                 <subgroupParams>
                     <param>foc_sl_erpm</param>
                     <param>foc_hall_interp_erpm</param>
@@ -3792,7 +3792,7 @@ p, li { white-space: pre-wrap; }
                 </subgroupParams>
             </subgroup>
             <subgroup>
-                <subgroupName>Encoder</subgroupName>
+                <subgroupName>编码器</subgroupName>
                 <subgroupParams>
                     <param>foc_sl_erpm</param>
                     <param>foc_encoder_offset</param>
@@ -3818,7 +3818,7 @@ p, li { white-space: pre-wrap; }
                 </subgroupParams>
             </subgroup>
             <subgroup>
-                <subgroupName>Advanced</subgroupName>
+                <subgroupName>高级</subgroupName>
                 <subgroupParams>
                     <param>foc_f_sw</param>
                     <param>foc_dt_us</param>
@@ -3841,7 +3841,7 @@ p, li { white-space: pre-wrap; }
         <group>
             <groupName>GPD</groupName>
             <subgroup>
-                <subgroupName>General</subgroupName>
+                <subgroupName>通用设置</subgroupName>
                 <subgroupParams>
                     <param>pwm_mode</param>
                     <param>gpd_buffer_notify_left</param>
@@ -3853,9 +3853,9 @@ p, li { white-space: pre-wrap; }
             </subgroup>
         </group>
         <group>
-            <groupName>PID Controllers</groupName>
+            <groupName>PID控制器</groupName>
             <subgroup>
-                <subgroupName>General</subgroupName>
+                <subgroupName>通用设置</subgroupName>
                 <subgroupParams>
                     <param>::sep::Speed Controller</param>
                     <param>s_pid_kp</param>
@@ -3875,7 +3875,7 @@ p, li { white-space: pre-wrap; }
             </subgroup>
         </group>
         <group>
-            <groupName>Additional Info</groupName>
+            <groupName>其他数据</groupName>
             <subgroup>
                 <subgroupName>Setup</subgroupName>
                 <subgroupParams>
@@ -3888,7 +3888,7 @@ p, li { white-space: pre-wrap; }
                 </subgroupParams>
             </subgroup>
             <subgroup>
-                <subgroupName>General</subgroupName>
+                <subgroupName>通用设置</subgroupName>
                 <subgroupParams>
                     <param>motor_brand</param>
                     <param>motor_model</param>

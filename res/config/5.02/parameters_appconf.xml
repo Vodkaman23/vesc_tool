@@ -22,7 +22,7 @@ p, li { white-space: pre-wrap; }
             <vTx>1</vTx>
         </controller_id>
         <timeout_msec>
-            <longName>Timeout</longName>
+            <longName>超时</longName>
             <type>2</type>
             <transmittable>1</transmittable>
             <description>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -42,7 +42,7 @@ p, li { white-space: pre-wrap; }
             <vTx>5</vTx>
         </timeout_msec>
         <timeout_brake_current>
-            <longName>Timeout Brake Current</longName>
+            <longName>断联刹车电流</longName>
             <type>1</type>
             <transmittable>1</transmittable>
             <description>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -64,7 +64,7 @@ p, li { white-space: pre-wrap; }
             <vTx>9</vTx>
         </timeout_brake_current>
         <send_can_status>
-            <longName>Can Status Message Mode</longName>
+            <longName>Can状态信息模式</longName>
             <type>4</type>
             <transmittable>1</transmittable>
             <description>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -82,7 +82,7 @@ p, li { white-space: pre-wrap; }
             <enumNames>CAN_STATUS_1_2_3_4_5</enumNames>
         </send_can_status>
         <send_can_status_rate_hz>
-            <longName>Can Status Rate</longName>
+            <longName>Can状态率</longName>
             <type>2</type>
             <transmittable>1</transmittable>
             <description>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -102,7 +102,7 @@ p, li { white-space: pre-wrap; }
             <vTx>3</vTx>
         </send_can_status_rate_hz>
         <can_baud_rate>
-            <longName>CAN Baud Rate</longName>
+            <longName>CAN波特率</longName>
             <type>4</type>
             <transmittable>1</transmittable>
             <description>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -123,7 +123,7 @@ p, li { white-space: pre-wrap; }
             <enumNames>CAN_BAUD_100K</enumNames>
         </can_baud_rate>
         <pairing_done>
-            <longName>Pairing Done</longName>
+            <longName>配对完成</longName>
             <type>5</type>
             <transmittable>1</transmittable>
             <description>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -135,7 +135,7 @@ p, li { white-space: pre-wrap; }
             <valInt>0</valInt>
         </pairing_done>
         <permanent_uart_enabled>
-            <longName>Enable Permanent UART</longName>
+            <longName>启用永久UART</longName>
             <type>5</type>
             <transmittable>1</transmittable>
             <description>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -147,7 +147,7 @@ p, li { white-space: pre-wrap; }
             <valInt>1</valInt>
         </permanent_uart_enabled>
         <shutdown_mode>
-            <longName>Shutdown Mode</longName>
+            <longName>关机模式</longName>
             <type>4</type>
             <transmittable>1</transmittable>
             <description>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -185,7 +185,7 @@ p, li { white-space: pre-wrap; }
             <enumNames>OFF_AFTER_5H</enumNames>
         </shutdown_mode>
         <can_mode>
-            <longName>CAN Mode</longName>
+            <longName>CAN 模式</longName>
             <type>4</type>
             <transmittable>1</transmittable>
             <description>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -209,7 +209,7 @@ p, li { white-space: pre-wrap; }
             <enumNames>Comm Bridge</enumNames>
         </can_mode>
         <uavcan_esc_index>
-            <longName>UAVCAN ESC Index</longName>
+            <longName>UAVCAN ESC指数</longName>
             <type>2</type>
             <transmittable>1</transmittable>
             <description>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -229,7 +229,7 @@ p, li { white-space: pre-wrap; }
             <vTx>1</vTx>
         </uavcan_esc_index>
         <uavcan_raw_mode>
-            <longName>UAVCAN Raw Throttle Mode</longName>
+            <longName>UAVCAN原始油门模式</longName>
             <type>4</type>
             <transmittable>1</transmittable>
             <description>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -244,7 +244,7 @@ p, li { white-space: pre-wrap; }
             <enumNames>Duty Cycle Control</enumNames>
         </uavcan_raw_mode>
         <app_to_use>
-            <longName>APP to Use</longName>
+            <longName>使用模式</longName>
             <type>4</type>
             <transmittable>1</transmittable>
             <description>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -258,17 +258,17 @@ p, li { white-space: pre-wrap; }
             <enumNames>PPM</enumNames>
             <enumNames>ADC</enumNames>
             <enumNames>UART</enumNames>
-            <enumNames>PPM and UART</enumNames>
-            <enumNames>ADC and UART</enumNames>
+            <enumNames>PPM 和 UART</enumNames>
+            <enumNames>ADC 和 UART</enumNames>
             <enumNames>Nunchuk (I2C, Nyko Kama)</enumNames>
             <enumNames>NRF</enumNames>
-            <enumNames>Custom User App</enumNames>
-            <enumNames>Balance</enumNames>
+            <enumNames>自定义模式</enumNames>
+            <enumNames>平衡</enumNames>
             <enumNames>PAS</enumNames>
-            <enumNames>ADC and PAS</enumNames>
+            <enumNames>ADC 和 PAS</enumNames>
         </app_to_use>
         <app_ppm_conf.ctrl_type>
-            <longName>Control Type</longName>
+            <longName>控制模式</longName>
             <type>4</type>
             <transmittable>1</transmittable>
             <description>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -307,19 +307,19 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Sans Serif'; font-weight:600;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</description>
             <cDefine>APPCONF_PPM_CTRL_TYPE</cDefine>
             <valInt>0</valInt>
-            <enumNames>Off</enumNames>
-            <enumNames>Current</enumNames>
-            <enumNames>Current No Reverse</enumNames>
-            <enumNames>Current No Reverse With Brake</enumNames>
-            <enumNames>Duty Cycle</enumNames>
-            <enumNames>Duty Cycle No Reverse</enumNames>
-            <enumNames>PID Speed Control</enumNames>
-            <enumNames>PID Speed Control No Reverse</enumNames>
-            <enumNames>Current Hyst Reverse With Brake</enumNames>
-            <enumNames>Current Smart Reverse</enumNames>
+            <enumNames>关闭</enumNames>
+            <enumNames>电流</enumNames>
+            <enumNames>电流倒退向</enumNames>
+            <enumNames>电流无倒退有刹车e</enumNames>
+            <enumNames>占空比</enumNames>
+            <enumNames>占空比无倒退</enumNames>
+            <enumNames>PID控制</enumNames>
+            <enumNames>PID控制无倒退</enumNames>
+            <enumNames>电流二拉刹车倒退</enumNames>
+            <enumNames>电流刹车拉到底倒退</enumNames>
         </app_ppm_conf.ctrl_type>
         <app_ppm_conf.pid_max_erpm>
-            <longName>PID Max ERPM</longName>
+            <longName>PID最高ERPM</longName>
             <type>1</type>
             <transmittable>1</transmittable>
             <description>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -341,7 +341,7 @@ p, li { white-space: pre-wrap; }
             <vTx>9</vTx>
         </app_ppm_conf.pid_max_erpm>
         <app_ppm_conf.hyst>
-            <longName>Input Deadband</longName>
+            <longName>空挡</longName>
             <type>1</type>
             <transmittable>1</transmittable>
             <description>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -363,7 +363,7 @@ p, li { white-space: pre-wrap; }
             <vTx>9</vTx>
         </app_ppm_conf.hyst>
         <app_ppm_conf.pulse_start>
-            <longName>Pulselength Start</longName>
+            <longName>脉冲长度开始</longName>
             <type>1</type>
             <transmittable>1</transmittable>
             <description>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -385,7 +385,7 @@ p, li { white-space: pre-wrap; }
             <vTx>9</vTx>
         </app_ppm_conf.pulse_start>
         <app_ppm_conf.pulse_end>
-            <longName>Pulselength End</longName>
+            <longName>脉冲长度结束</longName>
             <type>1</type>
             <transmittable>1</transmittable>
             <description>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -407,7 +407,7 @@ p, li { white-space: pre-wrap; }
             <vTx>9</vTx>
         </app_ppm_conf.pulse_end>
         <app_ppm_conf.pulse_center>
-            <longName>Pulselength Center</longName>
+            <longName>脉冲长度中位</longName>
             <type>1</type>
             <transmittable>1</transmittable>
             <description>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -429,7 +429,7 @@ p, li { white-space: pre-wrap; }
             <vTx>9</vTx>
         </app_ppm_conf.pulse_center>
         <app_ppm_conf.median_filter>
-            <longName>Median Filter</longName>
+            <longName>滤波（防止干扰导致的突然加速刹车）</longName>
             <type>5</type>
             <transmittable>1</transmittable>
             <description>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -441,7 +441,7 @@ p, li { white-space: pre-wrap; }
             <valInt>1</valInt>
         </app_ppm_conf.median_filter>
         <app_ppm_conf.safe_start>
-            <longName>Safe Start</longName>
+            <longName>安全启动（开机后几秒遥控才有用）</longName>
             <type>5</type>
             <transmittable>1</transmittable>
             <description>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -453,7 +453,7 @@ p, li { white-space: pre-wrap; }
             <valInt>1</valInt>
         </app_ppm_conf.safe_start>
         <app_ppm_conf.throttle_exp>
-            <longName>Throttle Expo</longName>
+            <longName>指数油门</longName>
             <type>1</type>
             <transmittable>1</transmittable>
             <description>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -486,7 +486,7 @@ p, li { white-space: pre-wrap; }
             <vTx>9</vTx>
         </app_ppm_conf.throttle_exp>
         <app_ppm_conf.throttle_exp_brake>
-            <longName>Throttle Expo Brake</longName>
+            <longName>指数刹车</longName>
             <type>1</type>
             <transmittable>1</transmittable>
             <description>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -519,7 +519,7 @@ p, li { white-space: pre-wrap; }
             <vTx>9</vTx>
         </app_ppm_conf.throttle_exp_brake>
         <app_ppm_conf.throttle_exp_mode>
-            <longName>Throttle Expo Mode</longName>
+            <longName>油门指数模式（不知道的自己复习初中数学去）</longName>
             <type>4</type>
             <transmittable>1</transmittable>
             <description>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -546,12 +546,12 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;The curve parameter, offsets and signs are mapped accordingly for each mode.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</description>
             <cDefine>APPCONF_PPM_THROTTLE_EXP_MODE</cDefine>
             <valInt>2</valInt>
-            <enumNames>Exponential</enumNames>
-            <enumNames>Natural</enumNames>
-            <enumNames>Polynomial</enumNames>
+            <enumNames>指数</enumNames>
+            <enumNames>自然对数</enumNames>
+            <enumNames>多项式</enumNames>
         </app_ppm_conf.throttle_exp_mode>
         <app_ppm_conf.ramp_time_pos>
-            <longName>Positive Ramping Time</longName>
+            <longName>油门响应时间</longName>
             <type>1</type>
             <transmittable>1</transmittable>
             <description>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -573,7 +573,7 @@ p, li { white-space: pre-wrap; }
             <vTx>9</vTx>
         </app_ppm_conf.ramp_time_pos>
         <app_ppm_conf.ramp_time_neg>
-            <longName>Negative Ramping Time</longName>
+            <longName>刹车响应时间</longName>
             <type>1</type>
             <transmittable>1</transmittable>
             <description>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -595,7 +595,7 @@ p, li { white-space: pre-wrap; }
             <vTx>9</vTx>
         </app_ppm_conf.ramp_time_neg>
         <app_ppm_conf.multi_esc>
-            <longName>Multiple VESCs Over CAN</longName>
+            <longName>多个VESC</longName>
             <type>5</type>
             <transmittable>1</transmittable>
             <description>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -607,7 +607,7 @@ p, li { white-space: pre-wrap; }
             <valInt>1</valInt>
         </app_ppm_conf.multi_esc>
         <app_ppm_conf.tc>
-            <longName>Traction Control</longName>
+            <longName>防滑模式</longName>
             <type>5</type>
             <transmittable>1</transmittable>
             <description>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -619,7 +619,7 @@ p, li { white-space: pre-wrap; }
             <valInt>0</valInt>
         </app_ppm_conf.tc>
         <app_ppm_conf.tc_max_diff>
-            <longName>TC Max ERPM Difference</longName>
+            <longName>防滑最高允许差速</longName>
             <type>1</type>
             <transmittable>1</transmittable>
             <description>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -641,7 +641,7 @@ p, li { white-space: pre-wrap; }
             <vTx>9</vTx>
         </app_ppm_conf.tc_max_diff>
         <app_ppm_conf.max_erpm_for_dir>
-            <longName>Max ERPM for direction switch</longName>
+            <longName>换方向最高允许ERPM</longName>
             <type>1</type>
             <transmittable>1</transmittable>
             <description>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -663,7 +663,7 @@ p, li { white-space: pre-wrap; }
             <vTx>9</vTx>
         </app_ppm_conf.max_erpm_for_dir>
         <app_ppm_conf.smart_rev_max_duty>
-            <longName>Smart Reverse Max Duty Cycle</longName>
+            <longName>倒车最高占空比</longName>
             <type>1</type>
             <transmittable>1</transmittable>
             <description>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -685,7 +685,7 @@ p, li { white-space: pre-wrap; }
             <vTx>9</vTx>
         </app_ppm_conf.smart_rev_max_duty>
         <app_ppm_conf.smart_rev_ramp_time>
-            <longName>Smart Reverse Ramp Time</longName>
+            <longName>倒车响应时间</longName>
             <type>1</type>
             <transmittable>1</transmittable>
             <description>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -707,7 +707,7 @@ p, li { white-space: pre-wrap; }
             <vTx>9</vTx>
         </app_ppm_conf.smart_rev_ramp_time>
         <app_adc_conf.ctrl_type>
-            <longName>Control Type</longName>
+            <longName>控制模式</longName>
             <type>4</type>
             <transmittable>1</transmittable>
             <description>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -1191,7 +1191,7 @@ p, li { white-space: pre-wrap; }
             <vTx>3</vTx>
         </app_adc_conf.update_rate_hz>
         <app_uart_baudrate>
-            <longName>Baudrate</longName>
+            <longName>波特率</longName>
             <type>2</type>
             <transmittable>1</transmittable>
             <description>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -3330,7 +3330,7 @@ p, li { white-space: pre-wrap; }
     </SerOrder>
     <Grouping>
         <group>
-            <groupName>General</groupName>
+            <groupName>模式</groupName>
             <subgroup>
                 <subgroupName>General</subgroupName>
                 <subgroupParams>
@@ -3353,7 +3353,7 @@ p, li { white-space: pre-wrap; }
         <group>
             <groupName>PPM</groupName>
             <subgroup>
-                <subgroupName>General</subgroupName>
+                <subgroupName>通用设置</subgroupName>
                 <subgroupParams>
                     <param>app_ppm_conf.ctrl_type</param>
                     <param>app_ppm_conf.median_filter</param>
@@ -3371,7 +3371,7 @@ p, li { white-space: pre-wrap; }
                 </subgroupParams>
             </subgroup>
             <subgroup>
-                <subgroupName>Mapping</subgroupName>
+                <subgroupName>区间</subgroupName>
                 <subgroupParams>
                     <param>app_ppm_conf.pulse_start</param>
                     <param>app_ppm_conf.pulse_end</param>
@@ -3380,7 +3380,7 @@ p, li { white-space: pre-wrap; }
                 </subgroupParams>
             </subgroup>
             <subgroup>
-                <subgroupName>Throttle Curve</subgroupName>
+                <subgroupName>油门曲线</subgroupName>
                 <subgroupParams>
                     <param>app_ppm_conf.throttle_exp</param>
                     <param>app_ppm_conf.throttle_exp_brake</param>
@@ -3441,7 +3441,7 @@ p, li { white-space: pre-wrap; }
             </subgroup>
         </group>
         <group>
-            <groupName>VESC Remote</groupName>
+            <groupName>VESC 遥控</groupName>
             <subgroup>
                 <subgroupName>General</subgroupName>
                 <subgroupParams>
